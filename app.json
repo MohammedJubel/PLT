@@ -1,0 +1,12 @@
+{
+  "name": "PLT",
+  "displayName": "PLT",
+  "expo": {
+    "name": "PLT",
+    "slug": "PLT",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
