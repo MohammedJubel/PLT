@@ -1,15 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
-import {
-  getTrackingStatus,
-  requestTrackingPermission,
-  TrackingStatus,
-} from '../utils/TrackingModule';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Alert } from 'react-native';
+import { getTrackingStatus, TrackingStatus } from '../utils/TrackingModule';
 
 export default function AcceptScreen({ navigation }) {
-  const [trackingStatus, setTrackingStatus] = useState<
-    TrackingStatus | '(loading)'
-  >('(loading)');
+  const [trackingStatus, setTrackingStatus] = useState('(loading)');
 
   useEffect(() => {
     getTrackingStatus()

@@ -20,15 +20,12 @@ export default function HomeScreen({ navigation }) {
   >('(loading)');
 
   useEffect(() => {
-    console.log(NativeModules, 'nativemodules');
     getTrackingStatus()
       .then((status) => {
-        console.log('status :>> ', status);
+        // console.log('status :>> ', status);
         setTrackingStatus(status);
         status === 'authorized' && navigation.navigate('Accepted');
         status === 'denied' && navigation.navigate('Denied');
-
-        console.log(status, 'this is status');
       })
       .catch((e) => Alert.alert('Error', e.toString() ?? e));
   }, [trackingStatus]);
